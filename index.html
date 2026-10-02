@@ -18,6 +18,7 @@
 <script src="/checker.js" defer></script>
 </head>
 <body>
+<div class="flagbar" aria-hidden="true"></div>
 <header class="wrap nav">
   <a class="brand" href="/"><img class="mark" src="/logo-mark.svg" alt="" width="40" height="40">Tracker UK180</a>
   <nav>
@@ -31,12 +32,12 @@
 
 <main>
   <section class="wrap hero">
-    <h1>Know how many days you can still spend abroad</h1>
+    <h1>Know how many days you can still spend <span class="hl">abroad</span></h1>
     <p class="lead">For most routes to UK settlement you can't be away more than 180 days in any 12 months. Tracker UK180 counts every day for you, so one long trip doesn't cost you years.</p>
     <a class="btn" data-buy href="#buy">Buy Tracker UK180</a>
     <p class="meta">One-off payment. Instant download. Excel, Google Sheets and interactive tracker.</p>
 
-    <div class="yearbox" aria-label="Example: a year of trips shown day by day">
+    <div class="yearbox reveal" aria-label="Example: a year of trips shown day by day">
       <div class="yearhead">
         <div class="count"><span id="yearCount">0</span><small> / 180 days</small></div>
         <p>An example year. Each square is one day; the dark ones were spent outside the UK. The limit applies to every 12-month stretch, not just the calendar year.</p>
@@ -71,7 +72,7 @@
     <div class="wrap">
       <h2>Check your last 12 months, free</h2>
       <p class="muted narrow">Enter up to five recent trips. We count the whole days you spent abroad in the 12 months up to today. Nothing is sent anywhere; it all runs in your browser.</p>
-      <div class="checker">
+      <div class="checker reveal">
         <div class="trips" id="ckTrips"></div>
         <div class="ckbar">
           <button type="button" class="btn ghostbtn" id="ckAdd">Add another trip</button>
@@ -87,7 +88,7 @@
   <section class="block">
     <div class="wrap">
       <h2>What Tracker UK180 does</h2>
-      <div class="features">
+      <div class="features reveal">
         <div><h3>Checks every 12-month window</h3><p>Not only the last year: each day of your qualifying period is checked against the limit.</p></div>
         <div><h3>Shows what you have left</h3><p>See how many days you can still spend abroad, starting today.</p></div>
         <div><h3>Tests a trip before you book</h3><p>Enter planned dates and see straight away whether they fit, plus the latest safe day to return.</p></div>
@@ -96,7 +97,7 @@
         <div><h3>Gives you a clean record</h3><p>Print or save a PDF list of your absences for your application, or export to CSV.</p></div>
       </div>
 
-      <div class="shots pair">
+      <div class="shots pair reveal">
         <div style="display:grid;gap:28px">
           <figure><div class="shot"><img src="/planner.jpg" alt="Trip planner showing a 20-day trip within the limit" loading="lazy" width="1600" height="411"></div><figcaption>Check a trip before you book it.</figcaption></figure>
           <figure><div class="shot"><img src="/chart.jpg" alt="Chart of days abroad in a rolling 12-month window" loading="lazy" width="1600" height="566"></div><figcaption>The rolling 12-month total for every day, including trips you have planned.</figcaption></figure>
@@ -110,7 +111,7 @@
     <div class="wrap">
       <h2>What you get</h2>
       <p class="muted narrow">One download with two versions of the same tracker. Use whichever suits you.</p>
-      <div class="inside">
+      <div class="inside reveal">
         <div><p class="file">Tracker-UK180.xlsx</p><h3>Spreadsheet</h3><p>For Excel, Google Sheets and Numbers. Fill in the yellow cells and the dashboard does the rest.</p></div>
         <div><p class="file">Tracker-UK180.html</p><h3>Interactive tracker</h3><p>Opens in any browser, offline. Chart, trip planner, printable report, English and Ukrainian.</p></div>
         <div><p class="file">Quick-Start-Guide.pdf</p><h3>Two-page guide</h3><p>Set up in five minutes. In English and Ukrainian.</p></div>
@@ -124,7 +125,7 @@
   <section class="block" id="why">
     <div class="wrap">
       <h2>Why a file, not another app</h2>
-      <div class="why">
+      <div class="why reveal">
         <div><h3>No account, no sign-up</h3><p>Your travel history is personal. With Tracker UK180 it stays on your own device and is never uploaded to us or anyone else.</p></div>
         <div><h3>Pay once, keep it</h3><p>No subscription and nothing to renew. The files keep working even without an internet connection.</p></div>
         <div><h3>A record you can share</h3><p>The spreadsheet opens anywhere, so you can send it to your solicitor or adviser exactly as it is.</p></div>
@@ -137,13 +138,13 @@
     <div class="wrap">
       <h2>Based on official guidance</h2>
       <p class="muted narrow">Tracker UK180 does the counting. The rules themselves come from the Home Office, and you should always check them at the source.</p>
-      <ul class="sources">
-        <li><a href="https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-continuous-residence" target="_blank" rel="noopener">Immigration Rules: Appendix Continuous Residence</a><span>The rule on absences for Skilled Worker, Global Talent, Long Residence and other routes.</span></li>
-        <li><a href="https://www.gov.uk/government/publications/continuous-residence-caseworker-guidance" target="_blank" rel="noopener">Continuous residence: caseworker guidance</a><span>How Home Office staff calculate continuous residence and absences.</span></li>
-        <li><a href="https://www.gov.uk/settle-in-the-uk" target="_blank" rel="noopener">Settle in the UK (gov.uk)</a><span>Overview of indefinite leave to remain and how to apply.</span></li>
-        <li><a href="https://www.gov.uk/government/collections/immigration-rules-statement-of-changes" target="_blank" rel="noopener">Immigration Rules: statements of changes</a><span>Where changes to the rules are published.</span></li>
-        <li><a href="https://www.gov.uk/find-an-immigration-adviser" target="_blank" rel="noopener">Find a regulated immigration adviser</a><span>For advice about your own situation.</span></li>
-      </ul>
+      <div class="srcgrid reveal">
+        <a class="src" href="https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-continuous-residence" target="_blank" rel="noopener"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg></span><span><b>Appendix Continuous Residence</b><small>The Immigration Rule that sets the 180-day absence limit for Skilled Worker, Global Talent, Long Residence and other routes.</small><span class="tag">GOV.UK</span></span></a>
+        <a class="src" href="https://www.gov.uk/government/publications/continuous-residence-caseworker-guidance" target="_blank" rel="noopener"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span><span><b>Continuous residence: caseworker guidance</b><small>How Home Office caseworkers count absences and decide whether continuous residence is broken.</small><span class="tag">GOV.UK</span></span></a>
+        <a class="src" href="https://www.gov.uk/settle-in-the-uk" target="_blank" rel="noopener"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></span><span><b>Settle in the UK</b><small>The official overview of indefinite leave to remain and how to apply on each route.</small><span class="tag">GOV.UK</span></span></a>
+        <a class="src" href="https://www.gov.uk/government/collections/immigration-rules-statement-of-changes" target="_blank" rel="noopener"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg></span><span><b>Statements of changes</b><small>Where every change to the Immigration Rules is published, with the date it takes effect.</small><span class="tag">GOV.UK</span></span></a>
+        <a class="src" href="https://www.gov.uk/find-an-immigration-adviser" target="_blank" rel="noopener"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></span><span><b>Find a regulated immigration adviser</b><small>Search the official register for an adviser who can look at your own situation.</small><span class="tag">GOV.UK</span></span></a>
+      </div>
       <div class="notice"><b>Rules can change.</b> Settlement rules are being reformed, and requirements may differ for your route or for applications made after a change. Check the links above before you rely on any calculation.</div>
     </div>
   </section>
@@ -162,7 +163,7 @@
   </section>
 
   <section class="wrap" id="buy">
-    <div class="final">
+    <div class="final reveal">
       <h2>Keep your settlement on track</h2>
       <p>One-off payment of <span data-price></span>. Instant download of the spreadsheet, the interactive tracker and the guide.</p>
       <a class="btn" data-buy href="#">Buy Tracker UK180</a>

@@ -25,17 +25,41 @@ window.SITE = {
   });
   document.querySelectorAll('[data-year]').forEach(function(el){ el.textContent = new Date().getFullYear(); });
 
-  // Hero year strip: 365 days, example trips shaded
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Hero year strip: 364 days, example trips fill in one by one
   var strip = document.getElementById('year');
   if (strip) {
     var trips = [[18,31],[64,103],[150,157],[206,260],[300,307],[332,346]];
-    var abroad = 0, html = '';
-    for (var d = 0; d < 364; d++) {
-      var on = trips.some(function(t){ return d > t[0] && d < t[1]; });
-      if (on) abroad++;
-      html += '<i' + (on ? ' class="on"' : '') + '></i>';
-    }
+    var cells = [], html = '';
+    for (var d = 0; d < 364; d++) html += '<i></i>';
     strip.innerHTML = html;
-    var n = document.getElementById('yearCount'); if (n) n.textContent = abroad;
+    var items = strip.children, on = [];
+    for (var k = 0; k < 364; k++) if (trips.some(function(t){ return k > t[0] && k < t[1]; })) on.push(k);
+    var counter = document.getElementById('yearCount');
+    var play = function(){
+      if (reduce) { on.forEach(function(k){ items[k].classList.add('on'); }); counter.textContent = on.length; return; }
+      var i = 0;
+      (function step(){
+        for (var n = 0; n < 3 && i < on.length; n++, i++) {
+          var el = items[on[i]]; el.classList.add('on','pop');
+          (function(e){ setTimeout(function(){ e.classList.remove('pop'); }, 250); })(el);
+        }
+        counter.textContent = i;
+        if (i < on.length) setTimeout(step, 22);
+      })();
+    };
+    if ('IntersectionObserver' in window) {
+      var seen = false;
+      new IntersectionObserver(function(es, ob){ if (es[0].isIntersecting && !seen) { seen = true; play(); ob.disconnect(); } }, {threshold: .3}).observe(strip);
+    } else play();
+  }
+
+  // Reveal sections on scroll
+  var rv = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) rv.forEach(function(el){ el.classList.add('in'); });
+  else {
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, {threshold: .12});
+    rv.forEach(function(el){ io.observe(el); });
   }
 })();
