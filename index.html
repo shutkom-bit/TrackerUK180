@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%231F2A44%22/><text x=%2250%22 y=%2266%22 font-size=%2244%22 font-family=%22Arial%22 font-weight=%22700%22 fill=%22white%22 text-anchor=%22middle%22>180</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+
+<title>Tracker UK180: 180-day absence tracker for UK settlement (ILR)</title>
+<meta name="description" content="Count your days outside the UK the way the 180-day rule works: every rolling 12-month window, whole days only. Excel, Google Sheets and an interactive tracker.">
+<meta property="og:title" content="Tracker UK180: 180-day absence tracker for ILR">
+<meta property="og:description" content="Know exactly how many days you can spend abroad without risking your UK settlement.">
+<meta property="og:image" content="/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<header class="wrap nav">
+  <a class="brand" href="/"><span class="mark">180</span>Tracker UK180</a>
+  <nav>
+    <a href="/#how">How it works</a>
+    <a href="/#inside">What you get</a>
+    <a href="/#faq">FAQ</a>
+    <a class="navbuy" href="/#buy">Buy</a>
+  </nav>
+</header>
+
+<main>
+  <section class="wrap hero">
+    <h1>Know how many days you can still spend abroad</h1>
+    <p class="lead">For most routes to UK settlement you can't be away more than 180 days in any 12 months. Tracker UK180 counts every day for you, so one long trip doesn't cost you years.</p>
+    <a class="btn" data-buy href="#buy">Buy Tracker UK180</a>
+    <p class="meta">One-off payment. Instant download. Excel, Google Sheets and interactive tracker.</p>
+
+    <div class="yearbox" aria-label="Example: a year of trips shown day by day">
+      <div class="yearhead">
+        <div class="count"><span id="yearCount">0</span><small> / 180 days</small></div>
+        <p>An example year. Each square is one day; the dark ones were spent outside the UK. The limit applies to every 12-month stretch, not just the calendar year.</p>
+      </div>
+      <div id="year"></div>
+      <div class="legend"><span>In the UK</span><span class="a">Abroad</span></div>
+    </div>
+  </section>
+
+  <section class="block" id="how">
+    <div class="wrap rule">
+      <div>
+        <h2>The rule is simple. Counting it isn't.</h2>
+        <p>The Home Office looks at every possible 12-month period during your qualifying years. A trip in February can still count against you next January.</p>
+        <p class="muted">Only whole days abroad count. The day you leave and the day you come back are treated as days in the UK.</p>
+      </div>
+      <div>
+        <div class="days" role="img" aria-label="A trip from 1 to 5 March counts as 3 days">
+          <div><b>1 Mar</b><span>Fly out</span></div>
+          <div><b>2 Mar</b><span class="on">Abroad</span></div>
+          <div><b>3 Mar</b><span class="on">Abroad</span></div>
+          <div><b>4 Mar</b><span class="on">Abroad</span></div>
+          <div><b>5 Mar</b><span>Fly back</span></div>
+        </div>
+        <p class="days-total">A trip from 1 to 5 March is 3 days of absence.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <h2>What Tracker UK180 does</h2>
+      <div class="features">
+        <div><h3>Checks every 12-month window</h3><p>Not only the last year: each day of your qualifying period is checked against the limit.</p></div>
+        <div><h3>Shows what you have left</h3><p>See how many days you can still spend abroad, starting today.</p></div>
+        <div><h3>Tests a trip before you book</h3><p>Enter planned dates and see straight away whether they fit, plus the latest safe day to return.</p></div>
+        <div><h3>Warns you early</h3><p>Amber from 150 days, red over the limit, with the exact dates where a problem starts.</p></div>
+        <div><h3>Knows your timeline</h3><p>Works for 3, 5 and 10-year routes and shows when your qualifying period ends.</p></div>
+        <div><h3>Gives you a clean record</h3><p>Print or save a PDF list of your absences for your application, or export to CSV.</p></div>
+      </div>
+
+      <div class="shots pair">
+        <div style="display:grid;gap:28px">
+          <figure><div class="shot"><img src="/planner.jpg" alt="Trip planner showing a 20-day trip within the limit" loading="lazy" width="1600" height="411"></div><figcaption>Check a trip before you book it.</figcaption></figure>
+          <figure><div class="shot"><img src="/chart.jpg" alt="Chart of days abroad in a rolling 12-month window" loading="lazy" width="1600" height="566"></div><figcaption>The rolling 12-month total for every day, including trips you have planned.</figcaption></figure>
+        </div>
+        <figure class="phonefig"><div class="shot"><img src="/mobile.jpg" alt="Tracker on a phone" loading="lazy" width="600" height="1298"></div><figcaption>Works on your phone too.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="inside">
+    <div class="wrap">
+      <h2>What you get</h2>
+      <p class="muted narrow">One download with two versions of the same tracker. Use whichever suits you.</p>
+      <div class="inside">
+        <div><p class="file">Tracker-UK180.xlsx</p><h3>Spreadsheet</h3><p>For Excel, Google Sheets and Numbers. Fill in the yellow cells and the dashboard does the rest.</p></div>
+        <div><p class="file">Tracker-UK180.html</p><h3>Interactive tracker</h3><p>Opens in any browser, offline. Chart, trip planner, printable report, English and Ukrainian.</p></div>
+        <div><p class="file">Quick-Start-Guide.pdf</p><h3>Two-page guide</h3><p>Set up in five minutes. In English and Ukrainian.</p></div>
+      </div>
+      <figure class="shot" style="margin-top:28px"><img src="/excel.jpg" alt="Excel version of Tracker UK180 with dashboard and explanations" loading="lazy" width="1400" height="910"></figure>
+      <p class="muted" style="margin-top:18px">No account, no subscription, no app. Your travel dates stay in your own file and are never sent to us.</p>
+    </div>
+  </section>
+
+  <section class="block faq" id="faq">
+    <div class="wrap"><div class="narrow">
+      <h2>Questions</h2>
+      <details><summary>Which visas does it work for?</summary><p>It is set up for the 180-days-in-any-12-months rule used by Skilled Worker and most 5-year routes, and has settings for 3-year (Global Talent, Innovator Founder) and 10-year (Long Residence) routes. Family-route rules can differ, so check the guidance for your exact route.</p></details>
+      <details><summary>Is this legal or immigration advice?</summary><p>No. It is a tool to keep an accurate record and do the counting. It counts every absence, including ones the Home Office may disregard, so it errs on the safe side. Before you apply, check the current Home Office guidance or speak to a regulated adviser.</p></details>
+      <details><summary>Does it work on Mac, iPhone and Android?</summary><p>Yes. The spreadsheet works in Excel, Google Sheets and Numbers. The interactive tracker opens in any modern browser on a computer or phone.</p></details>
+      <details><summary>Where is my data stored?</summary><p>Only on your device: inside your spreadsheet file, or in your browser for the interactive version. Nothing is uploaded. The interactive version has a backup button so you can move your data to another device.</p></details>
+      <details><summary>Is it a subscription?</summary><p>No. You pay once and keep the files, including updates to this version.</p></details>
+      <details><summary>What if it doesn't work for me?</summary><p>Email us within 14 days of purchase and we'll help, or refund you if the files don't work as described. See <a href="/terms">terms and refunds</a>.</p></details>
+    </div></div>
+  </section>
+
+  <section class="wrap" id="buy">
+    <div class="final">
+      <h2>Keep your settlement on track</h2>
+      <p>One-off payment of <span data-price></span>. Instant download of the spreadsheet, the interactive tracker and the guide.</p>
+      <a class="btn" data-buy href="#">Buy Tracker UK180</a>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="/privacy">Privacy policy</a>
+      <a href="/terms">Terms and refunds</a>
+      <a data-email href="#">contact</a>
+    </div>
+    <p>© <span data-year></span> <span data-seller></span>, <span data-location></span>.</p>
+    <p class="disclaimer">Tracker UK180 is a personal record-keeping tool. It is not legal or immigration advice and is not affiliated with the Home Office or UK Visas and Immigration. Immigration rules differ by route and change over time. Always check the current official guidance or speak to a regulated immigration adviser before you apply.</p>
+  </div>
+</footer>
+<script src="/site.js"></script>
+
+</body>
+</html>
