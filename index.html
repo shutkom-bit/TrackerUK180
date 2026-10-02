@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%231F2A44%22/><text x=%2250%22 y=%2266%22 font-size=%2244%22 font-family=%22Arial%22 font-weight=%22700%22 fill=%22white%22 text-anchor=%22middle%22>180</text></svg>">
+<link rel="icon" type="image/svg+xml" href="/logo-mark.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -15,13 +15,15 @@
 <meta property="og:description" content="Know exactly how many days you can spend abroad without risking your UK settlement.">
 <meta property="og:image" content="/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<script src="/checker.js" defer></script>
 </head>
 <body>
 <header class="wrap nav">
-  <a class="brand" href="/"><span class="mark">180</span>Tracker UK180</a>
+  <a class="brand" href="/"><img class="mark" src="/logo-mark.svg" alt="" width="40" height="40">Tracker UK180</a>
   <nav>
     <a href="/#how">How it works</a>
     <a href="/#inside">What you get</a>
+    <a href="/#check">Free check</a>
     <a href="/#faq">FAQ</a>
     <a class="navbuy" href="/#buy">Buy</a>
   </nav>
@@ -64,6 +66,24 @@
     </div>
   </section>
 
+
+  <section class="block" id="check">
+    <div class="wrap">
+      <h2>Check your last 12 months, free</h2>
+      <p class="muted narrow">Enter up to five recent trips. We count the whole days you spent abroad in the 12 months up to today. Nothing is sent anywhere; it all runs in your browser.</p>
+      <div class="checker">
+        <div class="trips" id="ckTrips"></div>
+        <div class="ckbar">
+          <button type="button" class="btn ghostbtn" id="ckAdd">Add another trip</button>
+        </div>
+        <div class="ckresult" aria-live="polite">
+          <div class="cknum"><span id="ckTotal">0</span><small> / 180 days</small></div>
+          <p id="ckMsg" class="muted">Add the dates you left and came back to the UK.</p>
+        </div>
+      </div>
+      <p class="muted small">This quick check only looks at the last 12 months. The full tracker checks every 12-month window across your whole qualifying period, tests future trips and keeps your record for the application.</p>
+    </div>
+  </section>
   <section class="block">
     <div class="wrap">
       <h2>What Tracker UK180 does</h2>
@@ -100,11 +120,40 @@
     </div>
   </section>
 
+
+  <section class="block" id="why">
+    <div class="wrap">
+      <h2>Why a file, not another app</h2>
+      <div class="why">
+        <div><h3>No account, no sign-up</h3><p>Your travel history is personal. With Tracker UK180 it stays on your own device and is never uploaded to us or anyone else.</p></div>
+        <div><h3>Pay once, keep it</h3><p>No subscription and nothing to renew. The files keep working even without an internet connection.</p></div>
+        <div><h3>A record you can share</h3><p>The spreadsheet opens anywhere, so you can send it to your solicitor or adviser exactly as it is.</p></div>
+        <div><h3>English and Ukrainian</h3><p>The interactive tracker and the guide are available in both languages.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="sources">
+    <div class="wrap">
+      <h2>Based on official guidance</h2>
+      <p class="muted narrow">Tracker UK180 does the counting. The rules themselves come from the Home Office, and you should always check them at the source.</p>
+      <ul class="sources">
+        <li><a href="https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-continuous-residence" target="_blank" rel="noopener">Immigration Rules: Appendix Continuous Residence</a><span>The rule on absences for Skilled Worker, Global Talent, Long Residence and other routes.</span></li>
+        <li><a href="https://www.gov.uk/government/publications/continuous-residence-caseworker-guidance" target="_blank" rel="noopener">Continuous residence: caseworker guidance</a><span>How Home Office staff calculate continuous residence and absences.</span></li>
+        <li><a href="https://www.gov.uk/settle-in-the-uk" target="_blank" rel="noopener">Settle in the UK (gov.uk)</a><span>Overview of indefinite leave to remain and how to apply.</span></li>
+        <li><a href="https://www.gov.uk/government/collections/immigration-rules-statement-of-changes" target="_blank" rel="noopener">Immigration Rules: statements of changes</a><span>Where changes to the rules are published.</span></li>
+        <li><a href="https://www.gov.uk/find-an-immigration-adviser" target="_blank" rel="noopener">Find a regulated immigration adviser</a><span>For advice about your own situation.</span></li>
+      </ul>
+      <div class="notice"><b>Rules can change.</b> Settlement rules are being reformed, and requirements may differ for your route or for applications made after a change. Check the links above before you rely on any calculation.</div>
+    </div>
+  </section>
   <section class="block faq" id="faq">
     <div class="wrap"><div class="narrow">
       <h2>Questions</h2>
       <details><summary>Which visas does it work for?</summary><p>It is set up for the 180-days-in-any-12-months rule used by Skilled Worker and most 5-year routes, and has settings for 3-year (Global Talent, Innovator Founder) and 10-year (Long Residence) routes. Family-route rules can differ, so check the guidance for your exact route.</p></details>
       <details><summary>Is this legal or immigration advice?</summary><p>No. It is a tool to keep an accurate record and do the counting. It counts every absence, including ones the Home Office may disregard, so it errs on the safe side. Before you apply, check the current Home Office guidance or speak to a regulated adviser.</p></details>
+      <details><summary>Is this a substitute for a solicitor or adviser?</summary><p>No. Tracker UK180 keeps an accurate record and does the arithmetic. It does not assess your eligibility or give legal advice. For questions about your own case, speak to a regulated immigration adviser or solicitor.</p></details>
+      <details><summary>Where do the counting rules come from?</summary><p>From the Home Office's Appendix Continuous Residence and the caseworker guidance on continuous residence, linked in the "Based on official guidance" section above. If the rules change, we update the tracker and you can download the new version.</p></details>
       <details><summary>Does it work on Mac, iPhone and Android?</summary><p>Yes. The spreadsheet works in Excel, Google Sheets and Numbers. The interactive tracker opens in any modern browser on a computer or phone.</p></details>
       <details><summary>Where is my data stored?</summary><p>Only on your device: inside your spreadsheet file, or in your browser for the interactive version. Nothing is uploaded. The interactive version has a backup button so you can move your data to another device.</p></details>
       <details><summary>Is it a subscription?</summary><p>No. You pay once and keep the files, including updates to this version.</p></details>
