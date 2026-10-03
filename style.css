@@ -18,9 +18,13 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--navy);outline-offse
 
 /* nav */
 .nav{display:flex;justify-content:space-between;align-items:center;padding-top:22px;padding-bottom:22px}
-.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:20px;text-decoration:none;color:var(--ink);letter-spacing:-.01em}
-.mark{width:40px;height:40px;border-radius:10px;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800;font-size:15px;letter-spacing:-.03em}
-.nav nav{display:flex;gap:22px;font-size:16px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink)}
+.wordmark{display:flex;flex-direction:column;line-height:1.05}
+.wordmark b{font-weight:800;font-size:25px;letter-spacing:-.025em;color:var(--navy)}
+.wordmark small{font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:5px}
+.mark{width:52px;height:52px;border-radius:13px;box-shadow:0 6px 16px rgba(1,33,105,.22);transition:transform .2s ease;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800;font-size:15px;letter-spacing:-.03em}
+.nav nav{display:flex;align-items:center;gap:24px;font-size:16px}
+.brand:hover .mark{transform:rotate(-6deg) scale(1.04)}
 .nav nav a{text-decoration:none;color:var(--muted)}
 .nav nav a:hover{color:var(--ink)}
 @media (max-width:640px){.nav nav a:not(.navbuy){display:none}}
@@ -29,7 +33,14 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--navy);outline-offse
 .btn{display:inline-block;background:var(--red);transition:transform .15s ease,background .15s ease;box-shadow:0 6px 18px rgba(200,16,46,.25);color:#fff;text-decoration:none;font-weight:700;
   padding:16px 26px;border-radius:12px;font-size:18px}
 .btn:hover{background:var(--redDark)}
-.navbuy{font-weight:700;color:var(--red)!important}
+.navbuy{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:#fff!important;background:var(--red);padding:10px 18px;border-radius:999px;box-shadow:0 6px 16px rgba(200,16,46,.28);transition:transform .15s ease,background .15s ease,box-shadow .15s ease;animation:buypulse 2.8s ease-in-out 1.2s 3}
+.navbuy:hover{background:var(--redDark);transform:translateY(-1px);box-shadow:0 10px 22px rgba(200,16,46,.34)}
+.navprice{background:rgba(255,255,255,.2);border-radius:999px;padding:2px 9px;font-size:14px}
+@keyframes buypulse{0%,100%{box-shadow:0 6px 16px rgba(200,16,46,.28),0 0 0 0 rgba(200,16,46,.45)}50%{box-shadow:0 6px 16px rgba(200,16,46,.28),0 0 0 10px rgba(200,16,46,0)}}
+@media (prefers-reduced-motion:reduce){.navbuy{animation:none}}
+@media (max-width:640px){.mark{width:44px;height:44px;border-radius:11px}.wordmark b{font-size:21px}.wordmark small{font-size:10.5px}.navbuy{padding:9px 14px}}
+.wordmark small{white-space:nowrap}
+@media (max-width:440px){.wordmark small{display:none}}
 
 /* hero */
 .hero{padding-top:48px;padding-bottom:72px}
@@ -104,6 +115,9 @@ figcaption{font-size:15px;color:var(--muted);margin-top:10px}
 footer{padding:40px 0 60px;font-size:15px;color:var(--muted);border-top:1px solid var(--line)}
 footer .links{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:14px}
 footer .links a{color:var(--ink)}
+footer .social{display:flex;gap:12px;flex-wrap:wrap;margin:6px 0 18px}
+footer .social a{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--navy);font-weight:600;font-size:15px;border:1.5px solid #D5DDEE;border-radius:999px;padding:8px 16px;transition:background .15s ease,border-color .15s ease}
+footer .social a:hover{background:#EEF2FA;border-color:var(--navy)}
 .disclaimer{font-size:14px;max-width:80ch}
 
 /* legal pages */
