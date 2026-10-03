@@ -5,7 +5,7 @@ window.SITE = {
   buyUrl: 'https://buy.stripe.com/cNidR16fw66Rdxec3N1oI00',                       // paste your Lemon Squeezy / Gumroad checkout link here
   price:  '£9',                     // shown on the buy buttons
   seller: 'Mihaly Sutko',            // legal name of the seller (you)
-  email:  'tracker.uk180@gmail.com',       // contact email for customers
+  email:  'hello@ilr180.co.uk',             // contact email for customers
   location: 'Scotland, United Kingdom'
 };
 /* ============================================================ */
